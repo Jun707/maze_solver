@@ -1,5 +1,5 @@
 from tkinter import Tk, BOTH, Canvas
-from graph import Point, Line
+from graph import Line
 
 class Window:
 
@@ -15,9 +15,8 @@ class Window:
         self.__root.update_idletasks()
         self.__root.update()
 
-    def draw_line(self, line: Line, fill_color):
+    def draw_line(self, line: Line, fill_color="black"):
         line.draw(self.__canvas, fill_color)
-
 
     def wait_for_close(self):
         self.running = True
