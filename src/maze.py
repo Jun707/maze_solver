@@ -1,5 +1,4 @@
 from graph import Cell
-from window import Window
 import time
 
 class Maze:
@@ -40,3 +39,12 @@ class Maze:
     def _animate(self):
         self._win.redraw()
         time.sleep(0.05)
+
+    def break_entrance_and_exit(self):
+        entrance_cell = self._cells[0][0]
+        entrance_cell.has_top_wall = False
+        self._draw_cell(0, 0)
+        exit_cell = self._cells[-1][-1]
+        exit_cell.has_bottom_wall = False
+        self._draw_cell(len(self._cells)-1, len(self._cells[0])-1)
+        
