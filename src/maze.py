@@ -4,7 +4,7 @@ import time
 
 class Maze:
 
-    def __init__(self, x1, y1, num_rows, num_cols, cell_size_x, cell_size_y, win):
+    def __init__(self, x1, y1, num_rows, num_cols, cell_size_x, cell_size_y, win = None):
         self.x1 = x1
         self.y1 = y1
         self._num_rows = num_rows
@@ -16,9 +16,9 @@ class Maze:
         self._create_cells()
 
     def _create_cells(self):
-        for i in range(self.num_cols):
+        for i in range(self._num_cols):
             column = []
-            for j in range(self.num_rows):
+            for j in range(self._num_rows):
                 cell = Cell(self._win)
                 column.append(cell)
             self._cells.append(column)
@@ -38,5 +38,5 @@ class Maze:
         self._animate()
 
     def _animate(self):
-        Window.redraw()
-        time.sleep(0.1)
+        self._win.redraw()
+        time.sleep(0.05)
