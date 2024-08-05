@@ -98,7 +98,7 @@ class Maze:
             
     def _reset_cells_visited(self):
         for i in range(self._num_cols):
-            for j in range(self._num_cols):
+            for j in range(self._num_rows):
                 self._cells[i][j].visited = False
 
     def solve(self):
@@ -107,7 +107,7 @@ class Maze:
     def _solve_r(self, i, j):
         self._animate()
         self._cells[i][j].visited = True
-        if i == self._num_cols -1 and j == self._num_cols -1:
+        if i == self._num_cols -1 and j == self._num_rows -1:
             return True
         
         if (i < self._num_cols - 1 and not self._cells[i][j].has_right_wall 
