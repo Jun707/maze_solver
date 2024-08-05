@@ -23,4 +23,4 @@ To get started with Maze Runner, you'll need to have Python installed on your sy
 Run the following command to start the application:
 
 ```sh
-python3 maze_runner.py
+python3 main.py
