@@ -70,7 +70,7 @@ class Cell:
         start_x = self._x1 + starting_length
         start_y = self._y1 + starting_length
 
-        ending_length = abs(to_cell._x2 - to_cell._y1) // 2
+        ending_length = abs(to_cell._x2 - to_cell._x1) // 2
         end_x = to_cell._x1 + ending_length
         end_y = to_cell._y1 + ending_length
 
